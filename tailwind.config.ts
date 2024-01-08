@@ -13,6 +13,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'FMC-primary': '#175d82​',
+        'FMC-secondary': '#178260​',
+        'FMC-blue': '#191782​',
+        'FMC-lightgray': '#EDEDED​',
+        'FMC-cyan': '#03A89E'
+      }
     },
   },
   plugins: [],
