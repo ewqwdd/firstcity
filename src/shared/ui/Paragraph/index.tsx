@@ -1,26 +1,46 @@
-import { ClassNames } from "@/shared/lib/ClassNames/ClassNames"
-import { Color } from "@/shared/lib/Colors/colors"
-import { textColorMap } from "@/shared/lib/Colors/textColor"
+import { FontFamily, fontFamilyMapper } from "@/shared/lib/FontFamily/fontFamilyMap"
+import { cn } from "@/shared/lib/utils"
+import Link from "next/link"
 import { ReactNode } from "react"
 
-export type TextSize = 'sm' | 'base' | 'lg' | 'xl' | '2xl'
-type Weight = 'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'
-
 export type ParagraphProps <C extends React.ElementType> = {
-    color?: Color
-    size?: TextSize
-    className?: string
     children: ReactNode
-    weight?: Weight
+    variant?: Variants
+    className?: string
+    fontFamily?: FontFamily
     as?: C
 } & React.ComponentPropsWithoutRef<C>
 
-export default function Paragraph<C extends React.ElementType>({className, color = 'primary', size = 'base', children, weight = 'normal', as}: ParagraphProps<C>) {
+type Variants = 'default' | 'inverted' | 'white' | 'blue'
+
+const variants: Record<Variants, string> = {
+    default: 'text-slate-800',
+    inverted: 'text-orange-500',
+    white: 'text-slate-200',
+    blue: 'text-FMC_blue'
+}
+
+const variantsLink: Record<Variants, string> = {
+    default: 'text-slate-700 hover:text-slate-800',
+    inverted: 'text-orange-400 hover:text-orange-500',
+    white: 'text-slate-100 hover:text-slate-300',
+    blue: 'text-FMC_blue hover:text-FMC_blue/80'
+}
+const defaultClassNames = 'leading-normal'
+
+export default function Paragraph<C extends React.ElementType = 'p'>({className, fontFamily = 'Inter', children, variant = 'default', as, ...props}: ParagraphProps<C>) {
     const Component = as || "p";
-    
-    return (
-        <p className={ClassNames(className, {}, [`font-${size} font-${weight}`, textColorMap(color)])}>
+    if (Component === 'a') {
+        return (
+            <Link href='' {...props} className={cn('transition-all font-medium', defaultClassNames, variantsLink[variant], fontFamilyMapper[fontFamily].className, className)}>
             {children}
-        </p>
+        </Link>
+        )
+    }
+
+    return (
+        <Component {...props} className={cn(defaultClassNames, variants[variant], fontFamilyMapper[fontFamily].className, className)}>
+            {children}
+        </Component>
     )
 }

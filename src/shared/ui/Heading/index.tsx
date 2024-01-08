@@ -1,19 +1,10 @@
-import { ElementType } from "react";
-import Paragraph, { ParagraphProps, TextSize } from "../Paragraph";
+import { cn } from "@/shared/lib/utils";
+import Paragraph, { ParagraphProps } from "../Paragraph";
 
-type HeadingProps = ParagraphProps<'h1'>
-
-const headingSizeMap: Record<TextSize, ElementType> = {
-    "2xl": 'h1',
-    xl: 'h2',
-    lg: 'h3',
-    base: 'h4',
-    sm: 'h5'
-}
-
-export default function Heading({children, size = '2xl', ...props}: HeadingProps) {
+export default function Heading<C extends React.ElementType>({children, as, className, ...props}: ParagraphProps<C>) {
+    const Component = as || 'h1'
     return (
-        <Paragraph {...props} size={size} as={headingSizeMap[size]}>
+        <Paragraph {...props} className={cn('text-xl', className)} as={Component}>
             {children}
         </Paragraph>
     )

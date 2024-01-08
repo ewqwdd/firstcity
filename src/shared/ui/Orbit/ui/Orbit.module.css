@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+  animation: outerRotation 3s linear infinite;
+}
+
+.element {
+  position: relative;
+  animation: innerRotation 3s linear infinite;
+}
+
+@keyframes innerRotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes outerRotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

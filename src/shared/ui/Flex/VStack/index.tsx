@@ -1,18 +1,21 @@
-import { ClassNames } from "@/shared/lib/ClassNames/ClassNames"
-import { bgColorMap } from "@/shared/lib/Colors/bgColor"
-import { textColorMap } from "@/shared/lib/Colors/textColor"
-import { ForwardedRef, ReactNode, forwardRef } from "react"
-import { FlexProps, textMap } from ".."
+import { FlexProps } from ".."
+import Link from "next/link"
+import { cn } from "@/shared/lib/utils"
 
+export default function VStack<C extends React.ElementType = 'div'>({children, className, as, ...props}: FlexProps<C>) {
+    const Component = as || 'div'
 
-
-export default forwardRef(function VStack({align, color = 'gray', justify, gap, children, className}: FlexProps, ref: ForwardedRef<HTMLDivElement>) {
-    const textColor = textColorMap(textMap[color])
-    const bgColor = bgColorMap(color)
+     if (Component === 'a') {
+        return (
+            <Link href='' {...props} className={cn(`justify-start flex-col flex`, className)}>
+                {children}
+            </Link>
+        )
+    }
 
     return (
-        <div className={ClassNames(className, {}, [bgColor, textColor, `justify-${justify} items-${align} flex-col`])} ref={ref}>
+        <Component {...props} className={cn(`justify-start flex-col flex`, className)}>
             {children}
-        </div>
+        </Component>
     )
-})
+}
