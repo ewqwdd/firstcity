@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, 'bg-FMC_lightgray')}>
+      <body className={cn(inter.className, 'bg-FMC_lightgray overflow-x-clip')}>
         <Nav />
-        <main className='max-w-7xl m-auto pt-10'>
+        <main className='max-w-7xl m-auto'>
           {children}
         </main>
       </body>

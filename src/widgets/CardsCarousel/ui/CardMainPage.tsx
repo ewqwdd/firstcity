@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import Paragraph from '@/shared/ui/Paragraph'
-import { ArrowDown } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
@@ -45,7 +45,7 @@ export default function CardMainPage({
           <Button variant={'secondary'} className="mt-auto" asChild>
             <Link href={link.href}>
               {link.label}
-              <ArrowDown />
+              <ArrowRight className='ml-1'/>
             </Link>
           </Button>
         )}

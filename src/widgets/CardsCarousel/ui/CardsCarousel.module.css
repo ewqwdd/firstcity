@@ -1,0 +1,15 @@
+.carousel {
+  position: relative;
+}
+
+.carousel::before {
+  content: '';
+  background: hsl(var(--primary));
+  width: 100lvw;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 70%;
+  position: absolute;
+  overflow-x: clip;
+  top: -4px;
+}

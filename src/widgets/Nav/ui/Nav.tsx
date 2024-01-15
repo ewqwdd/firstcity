@@ -6,7 +6,7 @@ import UserNavBar from "./UserNavBar";
 
 export default function Nav() {
     return (
-        <HStack as='nav' className="bg-FMC_primary py-1 justify-center">
+        <HStack as='nav' className="bg-primary py-1 justify-center">
             <HStack className="justify-end items-center w-full max-w-7xl gap-2">
                 <Button variant="transparent" className="py-6" asChild>
                     <Heading as='a' href=""  className="mr-auto *:text-4xl font-semibold">
