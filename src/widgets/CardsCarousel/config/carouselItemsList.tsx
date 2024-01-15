@@ -15,7 +15,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
         content: <Paragraph>Understand what we have to offer</Paragraph>,
         description: 'What we do',
         link: {
-            href: '/',
+            href: '/about',
             label: 'Read more'
         },
         title: 'About'
@@ -24,7 +24,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
         content: <Paragraph>See how you could afford our services</Paragraph>,
         description: 'What we offer and how it works',
         link: {
-            href: '/',
+            href: '/services',
             label: 'Read more'
         },
         title: 'Services'
@@ -33,7 +33,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
         content: <Paragraph>Contact us if you have any enquiries or any concerns</Paragraph>,
         description: 'Give us a call',
         link: {
-            href: '/',
+            href: '/contact-us',
             label: 'Read more'
         },
         title: 'Contact'
@@ -41,7 +41,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
     {
         description: 'Payment methods and how it works',
         link: {
-            href: '/',
+            href: '/services',
             label: 'Read more'
         },
         title: 'Services'

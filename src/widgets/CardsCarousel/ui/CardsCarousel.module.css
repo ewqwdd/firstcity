@@ -10,6 +10,5 @@
   left: 50%;
   height: 70%;
   position: absolute;
-  overflow-x: clip;
   top: -4px;
 }

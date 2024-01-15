@@ -1,34 +1,9 @@
-.blob {
-  border-radius: 46% 51% 48% 61% / 34% 54% 37% 56%;
-  overflow: hidden;
-  position: relative;
-  pointer-events: none;
-  max-height: 500px;
-  margin: auto;
-  height: 100%;
-  aspect-ratio: 1/1;
-  padding: 24px;
-}
-
-.heading {
-  height: calc(80svh - var(--nav-height));
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 600px;
-  position: relative;
-}
-
-.heading::before {
-  overflow-x: clip;
-  min-height: 600px;
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100lvw;
-  height: 100%;
-  background: hsl(var(--primary));
-  color: hsl(var(--foreground));
+.scrollCover {
+  left: 100%;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 18px;
+  height: 100lvh;
+  z-index: -1000;
+  background: hsl(var(--primary));
+  position: absolute;
 }

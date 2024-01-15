@@ -20,6 +20,7 @@ export default function CardsCarousel() {
           console.log(wrapper.clientWidth)
           const transform = container.style.transform
           const number = transform.match(/\d+/);
+          const nodes = api_
         })
       }}> 
         <CarouselContent className="-ml-1">

@@ -1,0 +1,33 @@
+.blob {
+  border-radius: 46%;
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+  max-height: 500px;
+  margin: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  padding: 24px;
+}
+
+.heading {
+  height: calc(80svh - var(--nav-height));
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 600px;
+  position: relative;
+}
+
+.heading::before {
+  min-height: 600px;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100lvw;
+  height: 100%;
+  background: hsl(var(--primary));
+  color: hsl(var(--foreground));
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
