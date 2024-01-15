@@ -15,14 +15,14 @@ type Variants = 'default' | 'inverted' | 'white' | 'blue'
 
 const variants: Record<Variants, string> = {
     default: 'text-slate-800',
-    inverted: 'text-orange-500',
+    inverted: 'text-orange-400',
     white: 'text-slate-200',
     blue: 'text-FMC_blue'
 }
 
 const variantsLink: Record<Variants, string> = {
     default: 'text-slate-700 hover:text-slate-800',
-    inverted: 'text-orange-400 hover:text-orange-500',
+    inverted: 'text-orange-300 hover:text-orange-500',
     white: 'text-slate-100 hover:text-slate-300',
     blue: 'text-FMC_blue hover:text-FMC_blue/80'
 }

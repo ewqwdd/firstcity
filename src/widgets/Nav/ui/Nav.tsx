@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import HStack from "@/shared/ui/Flex/HStack";
 import Heading from "@/shared/ui/Heading";
 import Paragraph from "@/shared/ui/Paragraph";
-import Link from "next/link";
+import UserNavBar from "./UserNavBar";
 
 export default function Nav() {
     return (
@@ -24,6 +24,7 @@ export default function Nav() {
                 <Paragraph as={'a'} href='about' variant="white">
                     About
                 </Paragraph>
+                <UserNavBar className="ml-6 hover:opacity-80 transition-opacity"/>
             </HStack>
         </HStack>
     )

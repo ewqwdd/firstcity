@@ -1,11 +1,12 @@
 "use client"
 
 import * as React from "react"
-import useEmblaCarousel, {
+import useEmblaCarousel from "embla-carousel-react"
+import {
   type EmblaCarouselType as CarouselApi,
   type EmblaOptionsType as CarouselOptions,
   type EmblaPluginType as CarouselPlugin,
-} from "embla-carousel-react"
+} from 'embla-carousel'
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/shared/lib/utils"
@@ -205,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       className={cn(
         "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
+          ? "lg:-left-12 -left-8 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -234,7 +235,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
+          ? "lg:-right-12 -right-8 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
