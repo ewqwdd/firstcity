@@ -34,10 +34,6 @@ export default function Home() {
           </Paragraph>
         </VStack>
       </HStack>
-      
-      <VStack className="gap-0 items-center">
-        
-      </VStack>
         <CardsCarousel />
         <Input className="self-center w-44"/>
     </VStack>
