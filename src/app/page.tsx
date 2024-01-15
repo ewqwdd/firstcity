@@ -17,7 +17,7 @@ export default function Home() {
         <div className={styles.blob}>
           <Image alt="Person sitting on the chair." src='/images/person_sitting.png' fill objectFit='cover'/>
         </div>
-        <VStack className="m-auto gap-6">
+        <VStack className="m-auto gap-6 max-w-[570px] ml-0">
           <Paragraph fontFamily="Salsa" className="text-slate-400 text-xl">
             Finding care simplified
           </Paragraph>
@@ -32,6 +32,14 @@ export default function Home() {
           <Paragraph className="text-slate-300">
             Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute. Qui eu nisi eu mollit nulla nisi magna do voluptate non dolor enim non. Veniam ex duis fugiat magna. Ut dolore anim elit dolor velit. Consectetur aliqua ipsum cupidatat commodo Lorem.
           </Paragraph>
+          <HStack className="gap-4 text-slate-200">
+            <Button variant={'secondary'} className="text-slate-800 font-medium text-lg">
+              Get Started!
+            </Button>
+            <Button variant={'ghost'} className="text-lg hover:bg-slate-100/10 hover:text-slate-50">
+              Learn More
+            </Button>
+          </HStack>
         </VStack>
       </HStack>
         <CardsCarousel />
