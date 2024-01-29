@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from '@/widgets/Nav/ui/Nav'
 import { cn } from '@/shared/lib/utils'
+import { headers } from 'next/headers'
+import UaParser from 'ua-parser-js'
+import NavMobile from '@/widgets/Nav/ui/NavMobile'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,10 +21,14 @@ export default function RootLayout({
   children: React.ReactNode,
   modal: React.ReactNode
 }) {
+  const userAgent = headers().get('user-agent')
+  const parsed = new UaParser(userAgent || '')
+  const isMobile = ['mobile', 'tablet'].includes(parsed.getDevice().type || '')
+
   return (
     <html lang="en">
       <body className={cn(inter.className, 'bg-zinc-100 overflow-x-hidden')}>
-        <Nav />
+        {isMobile ? <NavMobile /> : <Nav />}
         <main className='max-w-7xl m-auto'>
           {children}
         </main>
