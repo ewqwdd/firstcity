@@ -23,7 +23,7 @@ const variants: Record<Variants, string> = {
 const variantsLink: Record<Variants, string> = {
     default: 'text-slate-700 hover:text-slate-800',
     inverted: 'text-secondary hover:text-orange-500',
-    white: 'text-slate-100 hover:text-slate-300',
+    white: 'text-slate-200 hover:text-slate-400',
     blue: 'text-FMC_blue hover:text-FMC_blue/80'
 }
 const defaultClassNames = 'leading-normal'
@@ -32,7 +32,7 @@ export default function Paragraph<C extends React.ElementType = 'p'>({className,
     const Component = as || "p";
     if (Component === 'a') {
         return (
-            <Link href='' {...props} className={cn('transition-all font-medium', defaultClassNames, variantsLink[variant], fontFamilyMapper[fontFamily].className, className)}>
+            <Link href='' {...props} className={cn('transition-all', defaultClassNames, variantsLink[variant], fontFamilyMapper[fontFamily].className, className)}>
             {children}
         </Link>
         )

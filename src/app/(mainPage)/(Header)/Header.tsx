@@ -7,12 +7,13 @@ import { Search } from "lucide-react";
 import { Orbit } from "@/shared/ui/Orbit";
 import { Button } from "@/components/ui/button";
 import styles from './Header.module.css'
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <HStack className={styles.heading} as='header'>
+    <HStack className={styles.heading} as='header' id="header">
         <div className={styles.blob}>
-          <Image alt="Person sitting on the chair." src='/images/person_sitting.png' fill objectFit='cover'/>
+          <Image alt="Person sitting on the chair." src='/images/person_sitting.png' fill className="object-cover"/>
         </div>
         <VStack className="m-auto gap-6 max-w-[570px] ml-0">
           <Paragraph fontFamily="Salsa" className="text-slate-400 text-xl">
@@ -30,11 +31,13 @@ export default function Header() {
             Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute. Qui eu nisi eu mollit nulla nisi magna do voluptate non dolor enim non. Veniam ex duis fugiat magna. Ut dolore anim elit dolor velit. Consectetur aliqua ipsum cupidatat commodo Lorem.
           </Paragraph>
           <HStack className="gap-4 text-slate-200">
-            <Button variant={'secondary'} className="text-slate-800 font-medium text-lg" size={'lg'}>
-              Get Started!
+            <Button asChild variant={'secondary'} className="text-slate-800 font-medium text-lg" size={'lg'}>
+              <Link href={'/auth'}>
+                Get Started!
+              </Link>
             </Button>
             <Button variant={'ghost'} className="text-lg hover:bg-slate-100/10 hover:text-slate-50" size={'lg'}>
-              Learn More
+              How it works?
             </Button>
           </HStack>
         </VStack>

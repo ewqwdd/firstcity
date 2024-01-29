@@ -28,7 +28,7 @@ export default function CardMainPage({
   title,
 }: CardMainPageProps) {
   return (
-    <Card className='h-full flex flex-col'>
+    <Card className='h-full flex flex-col justify-between'>
       <CardHeader className="p-4">
         {title ? (
           <CardTitle>
@@ -39,10 +39,10 @@ export default function CardMainPage({
           <CardDescription className="!mt-0">{description}</CardDescription>
         ) : null}
       </CardHeader>
-      <CardContent className="p-4 flex flex-col items-start gap-2 grow">
+      <CardContent className="px-4 pb-2 mt-auto mb-2 flex flex-col items-start gap-2">
         {content}
         {link && (
-          <Button variant={'secondary'} className="mt-auto" asChild>
+          <Button variant={'secondary'} className="mt-4" asChild>
             <Link href={link.href}>
               {link.label}
               <ArrowRight className='ml-1'/>

@@ -7,16 +7,16 @@ interface LinkElement {
 
 export const linksList: LinkElement[] = [
     {
-        href: '/',
-        label: 'Home'
+        href: '/how-it-works',
+        label: 'How it works'
     },
     {
         href: '/about',
         label: 'About'
     },
     {
-        href: '/services',
-        label: 'Services'
+        href: '/faq',
+        label: 'FAQ'
     },
     {
         href: '/contact-us',

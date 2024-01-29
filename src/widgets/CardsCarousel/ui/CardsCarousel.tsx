@@ -12,17 +12,7 @@ export default function CardsCarousel() {
       <Carousel className="w-full" opts={{
         slidesToScroll: 2
       }}
-      
-      setApi={(api) => {
-        api.on('scroll', (api_, evt) => {
-          const container = api_.containerNode()
-          const wrapper = api_.rootNode()
-          console.log(wrapper.clientWidth)
-          const transform = container.style.transform
-          const number = transform.match(/\d+/);
-          const nodes = api_
-        })
-      }}> 
+      > 
         <CarouselContent className="-ml-1">
           {CarouselItemsList.map((elem, index) => (
             <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">

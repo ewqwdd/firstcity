@@ -1,0 +1,17 @@
+.heading {
+  height: calc(40svh - var(--nav-height));
+  justify-content: center;
+  padding-bottom: var(--nav-height);
+}
+
+.heading::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100lvw;
+  height: 40svh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(var(--primary));
+}
