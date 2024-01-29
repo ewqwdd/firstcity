@@ -18,19 +18,19 @@ export default function page() {
             <Heading className="text-base bg-slate-300/60 rounded-lg p-2 text-opacity-70 leading-none font-semibold self-center">
                 FAQ
             </Heading>
-            <Heading className="text-center text-5xl mt-2 font-bold text-slate-50" fontFamily="Inter" >
+            <Heading className="max-sm:text-4xl text-center text-5xl mt-2 font-bold text-slate-50" fontFamily="Inter" >
                 Frequently asked questions.
             </Heading>
-            <Paragraph variant="white" className="text-opacity-80 text-center max-w-4xl text-lg mt-3 leading-tight mx-auto">
+            <Paragraph variant="white" className="max-sm:text-base text-opacity-80 text-center max-w-4xl text-lg mt-3 leading-tight mx-auto">
                 Welcome to our FAQ page! We've compiled a list of commonly asked questions to provide with quick and informative answers
             </Paragraph>
         </VStack>
-        <section id="faq" about="FAQ" className="grid grid-cols-2 grow">
-             <VStack className="bg-slate-100/5 p-8 pb-4 shadow-md items-center rounded-lg max-w-[80%] mx-auto place-self-start mt-8">
-                <Heading className="text-2xl font-bold text-center">
+        <section id="faq" about="FAQ" className="grid lg:grid-cols-2 grow">
+             <VStack className="max-lg:order-2 bg-slate-100/5 p-4 min-[520px]:p-6 sm:p-8 pb-4 shadow-md items-center rounded-lg sm:max-w-[90%] xl:max-w-[80%] mx-auto place-self-start mt-8">
+                <Heading className="text-xl min-[520px]:text-2xl font-bold text-center">
                     Still have questions?
                 </Heading>
-                <Paragraph className="text-sm text-slate-600 leading-snug mt-4 text-center px-3">
+                <Paragraph className="text-xs min-[520px]:text-sm text-slate-600 leading-snug mt-4 text-center px-3">
                     You can submit your question or request through our contact form. Please provide as much details possible so that we can assist you effectively
                 </Paragraph>
                 <Button variant={'secondary'} className="mt-4" asChild>
