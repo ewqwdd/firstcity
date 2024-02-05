@@ -5,9 +5,8 @@
 .carousel::before {
   content: '';
   background: hsl(var(--primary));
-  width: 100lvw;
-  transform: translateX(-50%);
-  left: 50%;
+  width: 100%;
+  left: 0;
   height: 70%;
   position: absolute;
   top: -4px;

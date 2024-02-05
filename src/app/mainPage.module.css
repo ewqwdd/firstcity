@@ -7,3 +7,11 @@
   background: hsl(var(--primary));
   position: absolute;
 }
+
+.navHeight {
+  --nav-height: 56px;
+}
+
+.navHeightMobile {
+  --nav-height: 56px;
+}

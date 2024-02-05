@@ -13,7 +13,7 @@ import HStack from "@/shared/ui/Flex/HStack";
 
 export default function page() {
   return (
-    <VStack className={styles.faqWrapper}>
+    <VStack className={styles.faqWrapper} as='main'>
         <VStack as="header" className={styles.heading}>
             <Heading className="text-base bg-slate-300/60 rounded-lg p-2 text-opacity-70 leading-none font-semibold self-center">
                 FAQ
@@ -25,7 +25,7 @@ export default function page() {
                 Welcome to our FAQ page! We've compiled a list of commonly asked questions to provide with quick and informative answers
             </Paragraph>
         </VStack>
-        <section id="faq" about="FAQ" className="grid lg:grid-cols-2 grow">
+        <section id="faq" about="FAQ" className="grid lg:grid-cols-2 grow px-3 max-w-7xl mx-auto">
              <VStack className="max-lg:order-2 bg-slate-100/5 p-4 min-[520px]:p-6 sm:p-8 pb-4 shadow-md items-center rounded-lg sm:max-w-[90%] xl:max-w-[80%] mx-auto place-self-start mt-8">
                 <Heading className="text-xl min-[520px]:text-2xl font-bold text-center">
                     Still have questions?

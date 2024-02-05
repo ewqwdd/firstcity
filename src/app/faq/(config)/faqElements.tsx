@@ -1,4 +1,3 @@
-import Paragraph from "@/shared/ui/Paragraph";
 import { ReactNode } from "react";
 
 export interface FaqElementSchema {

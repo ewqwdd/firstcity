@@ -4,6 +4,39 @@
 
 .mobile {
   animation: open 0.4s ease-in-out;
+  top: var(--nav-height);
+}
+
+.close {
+  height: 0;
+  opacity: 0.3;
+  transition: 0.4s ease-in-out;
+}
+
+.openX {
+  transition: 0.3s ease-in-out;
+  rotate: 90deg;
+  opacity: 1;
+}
+
+.closeX {
+  transition: 0.3s ease-in-out;
+  rotate: 0deg;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.openMenu {
+  transition: 0.3s ease-in-out;
+  rotate: 0;
+  opacity: 1;
+}
+
+.closeMenu {
+  transition: 0.3s ease-in-out;
+  rotate: 90deg;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @keyframes open {
@@ -17,8 +50,28 @@
   }
 }
 
-.close {
-  height: 0;
-  opacity: 0;
-  transition: 0.4s ease-in-out;
+@keyframes opacityReveal {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityHide {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

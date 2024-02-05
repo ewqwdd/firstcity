@@ -4,16 +4,17 @@ import Heading from '@/shared/ui/Heading'
 import Paragraph from '@/shared/ui/Paragraph'
 import { linksList } from '../config/linksList'
 import styles from './Nav.module.css'
+import { cn } from '@/shared/lib/utils'
 
 export default function Nav() {
   return (
-    <HStack as="nav" className={"bg-primary py-1 justify-center " + styles.nav}>
+    <HStack as="nav" className={cn("bg-primary py-1 justify-center ", styles.nav)}>
       <HStack className="justify-end items-center w-full max-w-7xl gap-4 px-[70px]">
         <Button variant="transparent" className="py-6" asChild>
           <Heading
             as="a"
             href="/"
-            className="mr-auto text-2xl font-semibold text-slate-100 hover:text-slate-200"
+            className="mr-auto text-3xl font-semibold text-slate-100 hover:text-slate-200"
           >
             FIND MY CARE
           </Heading>
