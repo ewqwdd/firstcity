@@ -52,7 +52,7 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
         FMC_primary: '#175d82',
-        FMC_secondary: '#178260',
+        FMC_secondary: '#673190',
         FMC_blue: '#191782',
         FMC_lightgray: '#EDEDED',
         FMC_cyan: '#03A89E',

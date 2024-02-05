@@ -33,7 +33,7 @@ export default function Header() {
               Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute. Qui eu nisi eu mollit nulla nisi magna do voluptate non dolor enim non. Veniam ex duis fugiat magna. Ut dolore anim elit dolor velit. Consectetur aliqua ipsum cupidatat commodo Lorem.
             </Paragraph>
             <HStack className="lg:gap-4 max-lg:justify-between max-lg:self-stretch max-lg:px-3 max-[420px]:px-0 text-slate-200 max-lg:order-3 max-lg:mt-5">
-              <Button asChild variant={'secondary'} className="text-slate-800 font-medium text-lg max-[420px]:px-6 max-[360px]:px-4 max-[310px]:px-2" size={'lg'}>
+              <Button asChild variant={'secondary'} className="text-white font-medium text-lg max-[420px]:px-6 max-[360px]:px-4 max-[310px]:px-2" size={'lg'}>
                 <Link href={'/auth'}>
                   Get Started!
                 </Link>
