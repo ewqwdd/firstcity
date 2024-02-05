@@ -7,7 +7,7 @@ interface Feature {
     icon: ReactNode
     text: string
 }
-const stylings = cn("max-w-12 w-full h-full max-h-12 text-secondary group-hover:text-purple-900 max-md:absolute max-md:-top-6 max-md:-left-6 max-md:opacity-30 -z-10 max-md:max-h-20 max-md:max-w-20", styles.shaking)
+const stylings = cn("max-w-12 w-full h-full max-h-12 text-secondary group-hover:text-purple-900 max-md:absolute max-md:-top-6 max-md:-left-6 max-md:opacity-30 -z-10 max-md:max-h-20 max-md:max-w-20", 'shaking')
 export const features: Feature[] = [
     {
         icon: <HeartHandshake className={stylings} />,

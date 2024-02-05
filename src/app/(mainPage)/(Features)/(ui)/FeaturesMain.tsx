@@ -19,7 +19,7 @@ export default function FeaturesMain() {
         </Heading>
         <VStack as="ul" className={'gap-6 max-[420px]:gap-6 mt-6 font-medium max-md:pl-3'}>
           {features.map((elem, index) => (
-            <HStack key={index} as="li" className={cn("gap-4 items-center group relative",  styles.parent)}>
+            <HStack key={index} as="li" className={cn("gap-4 items-center group relative",  'parent')}>
               {elem.icon}
               <Paragraph className="text-slate-700 max-[420px]:text-sm max-[320px]:text-xs">{elem.text}</Paragraph>
             </HStack>

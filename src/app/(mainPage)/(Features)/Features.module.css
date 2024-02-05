@@ -6,24 +6,6 @@
     transform: rotate(0);
   }
 }
-@keyframes shake {
-  0% {
-    rotate: 0;
-  }
-  25% {
-    rotate: 6deg;
-  }
-  75% {
-    rotate: -6deg;
-  }
-  100% {
-    rotate: 0;
-  }
-}
 .spin {
   animation: spinReverse 10s linear infinite;
-}
-.parent:hover .shaking {
-  transition: 0.3s ease-in-out;
-  animation: shake 0.8s ease-in-out infinite;
 }
