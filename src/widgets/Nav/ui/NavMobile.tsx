@@ -9,12 +9,12 @@ export default function NavMobile() {
   return (
     <>
     <div className={styles.nav} />
-    <HStack className={cn('bg-primary fixed top-0 left-0 w-full items-center z-40 px-2', styles.nav)}>
+    <HStack className={cn('bg-primary fixed top-0 left-0 w-full items-center z-40 px-2 shadow-xl', styles.nav)}>
       <Button variant={'transparent'} asChild>
         <Heading
           as="a"
           href="/"
-          className="text-2xl font-semibold text-slate-100 hover:text-slate-200 px-2 py-0.5"
+          className="text-2xl max-[420px]:text-xl font-semibold text-slate-100 hover:text-slate-200 px-2 py-0.5"
         >
           FIND MY CARE
         </Heading>

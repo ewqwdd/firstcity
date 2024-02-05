@@ -7,6 +7,9 @@ import Link from 'next/link'
 import { Separator } from '@/components/ui/separator'
 import styles from './Nav.module.css'
 import { cn } from '@/shared/lib/utils'
+import { Button } from '@/components/ui/button'
+
+const buttonStyles = 'absolute top-0 left-0 p-0 w-full h-full hover:text-inherit hover:bg-white/60'
 
 export default function NavMobileModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -38,8 +41,8 @@ export default function NavMobileModal() {
   return (
     <>
       <div className='relative text-slate-100 ml-auto w-14 h-14'>
-        <Menu className={cn("absolute w-full h-full top-0 left-0", (iconMenu ? styles.closeMenu : styles.openMenu))} onClick={toggleNav}/>
-        <X className={cn("absolute w-full h-full top-0 left-0", (!iconMenu ? styles.closeX : styles.openX))} onClick={toggleNav}/>
+        <Button className={cn(buttonStyles, (iconMenu ? styles.closeMenu : styles.openMenu))} onClick={toggleNav} variant={'ghost'}><Menu className='w-full h-full' /></Button>
+        <Button className={cn(buttonStyles, (!iconMenu ? styles.closeX : styles.openX))} onClick={toggleNav}><X className='w-full h-full' /></Button>
       </div>
       {isOpen ? (
         <VStack className={cn("fixed bg-blue-100 w-full h-full right-0 ", styles.mobile, isClosing ? styles.close : '')}>
@@ -48,13 +51,16 @@ export default function NavMobileModal() {
               <Link
                 key={index}
                 href={elem.href}
-                className="px-2  py-2 hover:bg-slate-400 text-sm transition-all text-slate-700 font-medium"
+                className="px-2  py-2 hover:bg-slate-400 text-lg transition-all text-slate-700 font-medium"
               >
                 {elem.label}
               </Link>
               <Separator className='bg-slate-800'/>
             </>
           ))}
+          <Button className='mt-4 text-xl font-semibold' variant={'secondary'}>
+            Apply Now
+          </Button>
         </VStack>
       ) : null}
     </>
