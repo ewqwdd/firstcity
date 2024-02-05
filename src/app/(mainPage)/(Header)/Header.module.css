@@ -23,7 +23,8 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    padding-bottom: 12px;
+    padding-bottom: 48px;
+    min-height: 0;
   }
   .blob {
     aspect-ratio: 5/2;

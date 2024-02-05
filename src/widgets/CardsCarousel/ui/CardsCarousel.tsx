@@ -8,7 +8,7 @@ import { cn } from "@/shared/lib/utils";
 
 export default function CardsCarousel() {
   return (
-    <div className={cn('m-auto px-10 lg:px-16 w-full relative', styles.carousel)}>
+    <div className={cn('m-auto min-[420px]:px-10 px-6 lg:px-16 w-full relative', styles.carousel)}>
       <Carousel className="w-full max-w-7xl mx-auto" opts={{
         slidesToScroll: 2
       }}
@@ -22,8 +22,8 @@ export default function CardsCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="max-[420px]:w-6 max-[420px]:h-6 max-[420px]:-left-[1.3rem]" />
+        <CarouselNext className="max-[420px]:w-6 max-[420px]:h-6 max-[420px]:-right-[1.3rem]" />
       </Carousel>
     </div>
   )
