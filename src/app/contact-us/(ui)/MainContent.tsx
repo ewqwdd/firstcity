@@ -21,7 +21,7 @@ export default function MainContent() {
   return (
     <VStack
       as="form"
-      className="lg:col-span-2 col-span-3 lg:px-[5%] md:px-4 gap-0.5 text-lg"
+      className="lg:col-span-2 col-span-3 lg:px-[5%] md:px-4 gap-0.5 text-lg text-purple-950"
       onSubmit={handleSubmit((e) => {})}
     >
       <Heading as="h2" className="text-xl text-purple-950">
@@ -76,7 +76,7 @@ export default function MainContent() {
         <Textarea
           {...register('comment', {maxLength: 900})}
           placeholder="Comment"
-          className="max-h-64"
+          className="max-h-64 min-h-20 h-28 max-sm:resize-none"
         />
         <Paragraph as="span" className="text-sm text-red-700">
           {errors['comment'] ?

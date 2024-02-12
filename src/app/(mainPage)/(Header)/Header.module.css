@@ -37,3 +37,9 @@
     margin: 0;
   }
 }
+
+@media (max-width: 520px) {
+  .blob {
+    aspect-ratio: 4/2;
+  }
+}

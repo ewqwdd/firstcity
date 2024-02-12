@@ -5,14 +5,16 @@ import { CarouselItemsList } from "../config/carouselItemsList";
 import CardMainPage from "./CardMainPage";
 import styles from './CardsCarousel.module.css'
 import { cn } from "@/shared/lib/utils";
-import { useScreen } from "@/shared/hooks/useScreen";
 
 export default function CardsCarousel() {
-  const width = useScreen()
+
   return (
     <div className={cn('m-auto min-[420px]:px-10 px-6 lg:px-16 w-full relative', styles.carousel)}>
       <Carousel className="w-full max-w-7xl mx-auto" opts={{
-        slidesToScroll: width && width<=1024 ? 1 : 2
+        containScroll: 'trimSnaps',
+        skipSnaps: true,
+        startIndex: 0,
+        dragFree: true
       }}
       > 
         <CarouselContent className="-ml-1">
