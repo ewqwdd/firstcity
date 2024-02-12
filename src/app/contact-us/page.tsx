@@ -8,7 +8,7 @@ import HStack from '@/shared/ui/Flex/HStack'
 
 export default function page() {
   return (
-    <VStack className="max-w-7xl max-lg:gap-4 flex-col-reverse md:grid lg:grid-cols-3 grid-cols-5 mx-auto mt-4 text-slate-800 px-3">
+    <VStack as='main' className="max-w-7xl max-lg:gap-4 flex-col-reverse md:grid lg:grid-cols-3 grid-cols-5 mx-auto mt-4 text-slate-800 px-3">
       <Aside />
       <MainContent />
       <ResponsiveHide
