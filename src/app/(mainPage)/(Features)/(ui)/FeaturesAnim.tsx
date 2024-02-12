@@ -12,7 +12,7 @@ import styles from '../Features.module.css'
 const defaultStylesElement = 'absolute w-1/5 h-1/5 text-secondary '
 export default function FeaturesAnim() {
   return (
-    <HStack className="max-md:w-3/4 max-md:max-w-80 max-md:mx-auto relative aspect-square justify-center items-center pointer-events-none md:my-auto">
+    <HStack className="overflow-clip max-md:w-3/4 max-md:max-w-80 max-md:mx-auto relative aspect-square justify-center items-center pointer-events-none md:my-auto">
       <div
         className="absolute top-0 left-0 w-full h-full animate-spin  max-h-full"
         style={{

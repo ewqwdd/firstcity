@@ -1,0 +1,1 @@
+export type display = 'tablet' | 'mobile' | 'desktop'
