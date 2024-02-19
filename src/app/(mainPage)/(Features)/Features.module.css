@@ -44,12 +44,12 @@
   .featureWrapper svg {
     animation: scaleAppear;
     animation-timeline: --wrapper;
-    animation-range: entry -30% entry 70%;
+    animation-range: entry -40% entry 70%;
   }
 
   @media (max-width: 768px) {
     .feature {
-      animation-range: entry 0% entry 100%;
+      animation-range: entry 20% entry 100%;
     }
   }
 }
