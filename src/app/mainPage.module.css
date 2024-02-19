@@ -9,9 +9,39 @@
 }
 
 .navHeight {
-  --nav-height: 56px;
+  --nav-height: 60px;
 }
 
 .navHeightMobile {
   --nav-height: 56px;
+}
+
+.progress {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  @supports (animation-timeline: scroll()) {
+    .progress {
+      display: block;
+      animation: progressAnim;
+      transform-origin: 0 50%;
+      left: 0;
+      top: 0;
+      position: fixed;
+      width: 100%;
+      height: 4px;
+      z-index: 100;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+@keyframes progressAnim {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }

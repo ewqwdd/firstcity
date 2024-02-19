@@ -6,6 +6,50 @@
     transform: rotate(0);
   }
 }
+@keyframes appear {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleAppear {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: translateX(1);
+  }
+}
+
 .spin {
   animation: spinReverse 10s linear infinite;
+}
+
+@supports (animation-timeline: view()) {
+  .feature {
+    animation: appear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 120%;
+  }
+
+  .featureWrapper {
+    view-timeline-name: --wrapper;
+  }
+
+  .featureWrapper svg {
+    animation: scaleAppear;
+    animation-timeline: --wrapper;
+    animation-range: entry -30% entry 70%;
+  }
+
+  @media (max-width: 768px) {
+    .feature {
+      animation-range: entry 0% entry 100%;
+    }
+  }
 }
