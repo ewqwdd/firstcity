@@ -16,10 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal
 }: {
   children: React.ReactNode,
-  modal: React.ReactNode
 }) {
   
   const isMobile = detectMobileServer()
@@ -29,7 +27,6 @@ export default function RootLayout({
       <body className={cn(inter.className, 'bg-zinc-100 overflow-x-hidden', height)}>
         {isMobile ? <NavMobile /> : <Nav />}
           {children}
-          {modal}
       </body>
     </html>
   )
