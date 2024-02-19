@@ -49,7 +49,7 @@
 
   @media (max-width: 768px) {
     .feature {
-      animation-range: entry 20% entry 100%;
+      animation-range: entry -20% entry 100%;
     }
   }
 }
