@@ -11,20 +11,22 @@ export type ParagraphProps <C extends React.ElementType> = {
     as?: C
 } & React.ComponentPropsWithoutRef<C>
 
-type Variants = 'default' | 'inverted' | 'white' | 'blue'
+type Variants = 'default' | 'inverted' | 'white' | 'blue' | 'gray'
 
 const variants: Record<Variants, string> = {
     default: 'text-slate-800',
     inverted: 'text-secondary',
     white: 'text-slate-100',
-    blue: 'text-FMC_blue'
+    blue: 'text-FMC_blue',
+    gray: 'text-slate-400'
 }
 
 const variantsLink: Record<Variants, string> = {
     default: 'text-slate-700 hover:text-slate-800',
     inverted: 'text-secondary hover:text-orange-500',
     white: 'text-slate-200 hover:text-slate-400',
-    blue: 'text-FMC_blue hover:text-FMC_blue/80'
+    blue: 'text-FMC_blue hover:text-FMC_blue/80',
+    gray: 'text-slate-500 hover:text-slate-700'
 }
 const defaultClassNames = 'leading-normal'
 

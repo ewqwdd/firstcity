@@ -9,56 +9,39 @@ import { Button } from '@/components/ui/button'
 import styles from './Header.module.css'
 import Link from 'next/link'
 import { cn } from '@/shared/lib/utils'
+import { Suspense } from 'react'
+import ConditionalRender from './ConditionalRender'
+
 
 export default function Header() {
   return (
-    <HStack className={'bg-FMC_primary'} as="header" id="header">
-      <div className={cn(styles.heading, 'max-w-7xl mx-auto gap-2')}>
-        <div className={styles.blob}>
-          <Image
-            alt="Person sitting on the chair."
-            src="/images/person_sitting.png"
-            fill
-            className="object-cover z-0"
-          />
-        </div>
-        <VStack className="m-auto gap-0 lg:gap-6 lg:max-w-[570px] lg:ml-0 max-lg:px-3 max-lg:items-center max-lg:my-0">
-          <Paragraph
-            fontFamily="Salsa"
-            className="text-slate-400 text-xl max-lg:order-2 max-[520px]:mt-3"
-          >
-            Finding care simplified
-          </Paragraph>
-          <HStack className="text-slate-100 max-lg:order-1">
-            <Heading className="sm:text-6xl min-[540px]:text-[50px] min-[360px]:text-[44px] text-[32px] max-lg:leading-none font-bold leading-8 text-slate-100 max-[520px]:mt-6 max-lg:mt-4">
-              Find my care
+    <HStack as="header" id="header">
+      <div className={cn(styles.heading, 'max-w-7xl mx-auto height-full leading mt-10 overflow-x-clip gap-6 px-3')}>
+        <VStack className='gap-10 [&>*]:max-w-[680px] w-full'>
+          <HStack className='relative'>
+            <Heading className='text-secondary font-extrabold text-6xl'>
+              <span className='max-lg:hidden'>Finding care <br/>simplified.</span>
+              <span className='lg:hidden'>Finding care simplified.</span>
             </Heading>
-            <Orbit right={-8}>
-              <Search className="sm:h-16 sm:w-16 min-[540px]:w-12 min-[540px]:h-12 h-9 w-9 min-[540px]:ml-6 ml-2" />
+            <Orbit className='lg:size-24 md:size-12 ml-12 max-lg:!absolute max-lg:top-[10%] max-lg:right-[10%]' right={'50%'}>
+              <Search className='lg:size-24 md:size-12' />
             </Orbit>
           </HStack>
-          <Paragraph className="text-slate-300 max-lg:order-3 max-[420px]:px-0 max-lg:max-w-3xl max-[520px]:px-3 max-lg:px-6 max-lg:mt-6 max-[520px]:text-center">
-            Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint
-            laborum elit do fugiat consectetur dolor excepteur aute.
+          <Paragraph className='text-2xl text-slate-400'>
+            Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute.
           </Paragraph>
-          <HStack className="lg:gap-4 max-lg:justify-between max-lg:self-stretch text-slate-200 max-lg:order-4 max-lg:mt-5 max-lg:px-6 max-[520px]:flex-col max-[520px]:items-center max-[520px]:gap-4">
-            <Button
-              asChild
-              variant={'secondary'}
-              className="text-white py-7 font-medium text-xl w-52"
-              size={'lg'}
-            >
-              <Link href={'/auth'}>Get Started!</Link>
+          <HStack className='lg:gap-[8%] gap-4 max-lg:flex-wrap'>
+            <Button className='font-medium text-xl py-4 basis-[41%]' variant={'secondary'}>
+              CONTACT US
             </Button>
-            <Button
-              variant={'ghost'}
-              className="text-xl py-7 hover:bg-slate-100/10 hover:text-slate-50 max-[520px]:bg-slate-700/50  w-52"
-              size={'lg'}
-            >
-              How it works?
+            <Button className='font-medium text-xl py-4 bg-foreground/10 basis-[41%]' variant={'ghost'}>
+              HOW IT WORKS?
             </Button>
           </HStack>
         </VStack>
+        <Suspense fallback={<div className='lg:w-[480px] w-[360px]' />}>
+          <ConditionalRender />
+        </Suspense>
       </div>
     </HStack>
   )

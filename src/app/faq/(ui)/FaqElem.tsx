@@ -10,7 +10,7 @@ export default function FaqElem({ content, trigger, value }: FaqElemProps) {
   return (
     <AccordionItem value={"item-" + value} className='border-slate-400/35 border-b-2' asChild>
       <li>
-        <AccordionTrigger className="text-lg font-medium hover:no-underline">
+        <AccordionTrigger className="text-lg font-medium hover:no-underline py-2">
           {trigger}
         </AccordionTrigger>
         <AccordionContent className="text-zinc-600">{content}</AccordionContent>

@@ -1,34 +1,61 @@
 'use client'
-
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import React, { useRef } from "react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { Navigation, Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { useScreen } from "@/shared/hooks/useScreen";
+import { cn } from "@/shared/lib/utils";
 import { CarouselItemsList } from "../config/carouselItemsList";
 import CardMainPage from "./CardMainPage";
-import styles from './CardsCarousel.module.css'
-import { cn } from "@/shared/lib/utils";
+import styles from "./CardsCarousel.module.css";
 
 export default function CardsCarousel() {
+  const width = useScreen();
+  const swiper = useRef<SwiperRef>(null);
 
   return (
-    <section id='Carousel' className={cn('m-auto min-[420px]:px-10 px-6 lg:px-16 w-full relative', styles.carousel)}>
-      <Carousel className="w-full max-w-7xl mx-auto" opts={{
-        containScroll: 'trimSnaps',
-        skipSnaps: true,
-        startIndex: 0,
-        dragFree: true
-      }}
-      > 
-        <CarouselContent className="-ml-1">
-          {CarouselItemsList.map((elem, index) => (
-            <CarouselItem key={index} className="pl-1 sm:basis-1/2 min-[900px]:basis-1/3 xl:basis-1/4">
-              <div className="p-1 h-full">
-                <CardMainPage {...elem}/>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="max-[420px]:w-6 max-[420px]:h-6 max-[420px]:-left-[1.3rem]" />
-        <CarouselNext className="max-[420px]:w-6 max-[420px]:h-6 max-[420px]:-right-[1.3rem]" />
-      </Carousel>
+    <section
+      id="Carousel"
+      className={cn(
+        "m-auto min-[420px]:px-10 px-3 lg:px-16 w-full relative",
+        styles.carousel
+      )}
+    >
+      <Swiper
+        ref={swiper}
+        navigation={true}
+        keyboard={true}
+        modules={[Navigation, Keyboard]}
+        className={cn("w-full max-w-7xl mx-auto bg-primary/10 lg:!px-8 !px-1 lg:!py-4 !py-1 rounded-xl items-stretch flex", styles.wrapper)}
+        breakpoints={{
+          520: {
+            slidesPerView: 3,
+            direction: 'vertical'
+          },
+          1024: {
+            direction: 'horizontal'
+          },
+          1280: {
+            slidesPerView: 4
+          }
+        }}
+      >
+        {CarouselItemsList.map((elem, index) => (
+          <SwiperSlide
+            key={index}
+            className="pl-1"
+            style={{
+              height: "unset",
+            }}
+          >
+            <div className="p-1 h-full">
+              <CardMainPage {...elem} />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
-  )
+  );
 }

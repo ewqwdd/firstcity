@@ -8,13 +8,13 @@ import { cn } from '@/shared/lib/utils'
 
 export default function Nav() {
   return (
-    <HStack as="nav" className={cn("bg-primary py-1 justify-center ", styles.nav)}>
-      <HStack className="justify-end items-center w-full max-w-7xl gap-4 px-[70px]">
+    <HStack as="nav" className={cn("py-1 justify-center ", styles.nav)}>
+      <HStack className="justify-end items-center w-full max-w-7xl gap-[3%] px-3">
         <Button variant="transparent" className="py-6" asChild>
           <Heading
             as="a"
             href="/"
-            className="mr-auto text-3xl font-semibold text-slate-100 hover:text-slate-200"
+            className="mr-auto text-3xl font-semibold hover:text-slate-950"
           >
             FIND MY CARE
           </Heading>
@@ -23,12 +23,15 @@ export default function Nav() {
           <Paragraph
             as={'a'}
             href={elem.href}
-            variant="white"
+            variant="gray"
             className="font-medium text-sm"
           >
             {elem.label}
           </Paragraph>
         ))}
+        <Button>
+          CONTACT US
+        </Button>
       </HStack>
     </HStack>
   )

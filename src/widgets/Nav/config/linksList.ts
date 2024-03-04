@@ -18,8 +18,4 @@ export const linksList: LinkElement[] = [
         href: '/faq',
         label: 'FAQ'
     },
-    {
-        href: '/contact-us',
-        label: 'Contact us'
-    }
 ]

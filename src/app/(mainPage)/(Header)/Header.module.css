@@ -1,19 +1,9 @@
-.blob {
-  border-radius: 46%;
-  overflow: hidden;
-  position: relative;
-  pointer-events: none;
-  max-width: 500px;
-  margin: auto;
-  width: 100%;
-  aspect-ratio: 1/1;
-}
-
 .heading {
-  height: calc(80svh - var(--nav-height));
+  height: calc(50dvh - var(--nav-height));
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  min-height: 600px;
+  width: 100%;
+  grid-template-columns: 1fr auto;
+  min-height: 540px;
   position: relative;
 }
 
@@ -25,21 +15,5 @@
     height: auto;
     padding-bottom: 48px;
     min-height: 0;
-  }
-  .blob {
-    aspect-ratio: 5/2;
-    padding: 0;
-    width: 100%;
-    overflow: clip;
-    max-width: none;
-    border-radius: 0;
-    clip-path: ellipse(84% 100% at 50% 0%);
-    margin: 0;
-  }
-}
-
-@media (max-width: 520px) {
-  .blob {
-    aspect-ratio: 4/2;
   }
 }

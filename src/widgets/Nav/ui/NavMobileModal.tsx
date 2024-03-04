@@ -52,7 +52,7 @@ export default function NavMobileModal() {
   }, [location])
   return (
     <>
-      <div className="relative text-slate-100 ml-auto w-14 h-14">
+      <div className="relative ml-auto w-14 h-14">
         <Button
           className={cn(
             buttonStyles,
@@ -66,6 +66,7 @@ export default function NavMobileModal() {
         <Button
           className={cn(buttonStyles, !iconMenu ? styles.closeX : styles.openX)}
           onClick={toggleNav}
+          variant={'ghost'}
         >
           <X className="w-full h-full" />
         </Button>
@@ -73,7 +74,7 @@ export default function NavMobileModal() {
       {isOpen ? (
         <VStack
           className={cn(
-            'fixed bg-blue-100 w-full h-full right-0 ',
+            'fixed bg-slate-100 w-full h-full right-0 ',
             styles.mobile,
             isClosing ? styles.close : ''
           )}

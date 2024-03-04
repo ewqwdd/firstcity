@@ -10,7 +10,7 @@ import { features } from '../(config)'
 
 export default function FeaturesMain() {
   return (
-    <VStack className="justify-center md:max-lg:col-span-2">
+    <VStack className={cn("justify-center md:max-lg:col-span-2")}>
         <Heading
           as="h2"
           className="text-primary text-3xl font-semibold text-center"
@@ -21,7 +21,7 @@ export default function FeaturesMain() {
           {features.map((elem, index) => (
             <HStack key={index} as="li" className={cn("gap-4 items-center group relative",  'parent', styles.featureWrapper)}>
               {elem.icon}
-              <Paragraph className={cn("text-slate-700 max-[420px]:text-sm max-[320px]:text-xs", styles.feature)}>{elem.text}</Paragraph>
+              <Paragraph className={cn("text-slate-700 max-[420px]:text-sm max-[320px]:text-xs translate-y-1/2", styles.feature)}>{elem.text}</Paragraph>
             </HStack>
           ))}
         </VStack>

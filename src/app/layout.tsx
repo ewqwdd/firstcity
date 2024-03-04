@@ -24,7 +24,7 @@ export default function RootLayout({
   const height = isMobile ? styles.navHeightMobile : styles.navHeight
   return (
     <html lang="en">
-      <body className={cn(inter.className, 'bg-zinc-100 overflow-x-hidden', height)}>
+      <body className={cn(inter.className, 'overflow-x-hidden', height)}>
         <div className={cn(styles.progress, 'bg-secondary')} />
         {isMobile ? <NavMobile /> : <Nav />}
           {children}

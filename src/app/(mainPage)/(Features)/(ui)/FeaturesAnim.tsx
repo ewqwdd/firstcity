@@ -50,15 +50,11 @@ export default function FeaturesAnim() {
       </div>
       <div
         className="absolute w-1/3 h-1/3 border-2 rounded-full border-secondary animate-ping top-[33%] left-[33%]"
-        style={{
-          animationDelay: '4s',
-        }}
+
       />
       <div
         className="absolute w-1/4 h-1/4 border-2 rounded-full border-primary animate-ping top-[37.5%] left-[37.5%]"
-        style={{
-          animationDelay: '2s',
-        }}
+
       />
       <div className="absolute w-1/6 h-1/6 border-2 rounded-full border-secondary animate-ping top-[41.7%] left-[41.7%]" />
       <Cross className="w-1/3 h-1/3 text-primary" />

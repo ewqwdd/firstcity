@@ -1,20 +1,17 @@
 import { ReactNode } from "react"
 import styles from './Orbit.module.css'
+import { cn } from "@/shared/lib/utils"
 
 interface OrbitProps {
     children: ReactNode
-    dimensions?: number
-    right?: number
+    right?: number | string
+    className?: string
 }
 
-export default function Orbit({children, dimensions, right}: OrbitProps) {
+export default function Orbit({children, right, className}: OrbitProps) {
   return (
     <div 
-    style={{
-        height: dimensions,
-        width: dimensions,
-    }}
-    className={styles.wrapper}
+    className={cn(styles.wrapper, className)}
     >
         <div className={styles.element}
         style={{

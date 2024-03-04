@@ -8,11 +8,11 @@
 }
 @keyframes appear {
   from {
-    transform: translateX(50%);
+    transform: translateY(50%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -20,10 +20,16 @@
 @keyframes scaleAppear {
   from {
     transform: scale(0.1);
+    opacity: 0;
   }
   to {
     transform: translateX(1);
+    opacity: var(--svg-opacity);
   }
+}
+
+.featureWrapper {
+  --svg-opacity: 1;
 }
 
 .spin {
@@ -32,9 +38,9 @@
 
 @supports (animation-timeline: view()) {
   .feature {
-    animation: appear;
+    animation: appear forwards;
     animation-timeline: view();
-    animation-range: entry 0% entry 120%;
+    animation-range: entry 40% entry 120%;
   }
 
   .featureWrapper {
@@ -44,12 +50,15 @@
   .featureWrapper svg {
     animation: scaleAppear;
     animation-timeline: --wrapper;
-    animation-range: entry -40% entry 70%;
+    animation-range: entry -30%;
   }
 
   @media (max-width: 768px) {
     .feature {
-      animation-range: entry -20% entry 100%;
+      animation-range: entry 20%;
+    }
+    .featureWrapper {
+      --svg-opacity: 0.3;
     }
   }
 }
