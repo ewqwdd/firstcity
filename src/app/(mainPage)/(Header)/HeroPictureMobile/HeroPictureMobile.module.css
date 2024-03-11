@@ -1,0 +1,9 @@
+.scrollDownBtn {
+  animation: scrollDownPulse 1s ease-in-out infinite;
+}
+
+@keyframes scrollDownPulse {
+  50% {
+    box-shadow: 0 0 0 8px hsl(var(--primary) / 0.2);
+  }
+}

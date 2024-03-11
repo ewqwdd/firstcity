@@ -25,7 +25,7 @@ export default function HeroPictureDesktop() {
         src="/images/hero.png"
         alt="hero-image"
         fill
-        className="object-contain object-top"
+        className="object-cover object-top"
         style={{
           clipPath: 'url("#mask")',
         }}

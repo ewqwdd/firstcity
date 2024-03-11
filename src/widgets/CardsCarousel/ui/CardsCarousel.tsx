@@ -1,41 +1,42 @@
 'use client'
-import React, { useRef } from "react";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useScreen } from "@/shared/hooks/useScreen";
 import { cn } from "@/shared/lib/utils";
 import { CarouselItemsList } from "../config/carouselItemsList";
 import CardMainPage from "./CardMainPage";
 import styles from "./CardsCarousel.module.css";
 
 export default function CardsCarousel() {
-  const width = useScreen();
-  const swiper = useRef<SwiperRef>(null);
 
   return (
     <section
       id="Carousel"
       className={cn(
-        "m-auto min-[420px]:px-10 px-3 lg:px-16 w-full relative",
+        "m-auto md:ml-10 lg:mx-0 px-0.5 md:px-3 max-sm:px-6 sm:max-lg:mt-10 max-sm:w-full lg:w-full relative py-2 sm:py-8 max-lg:bg-primary/10 max-lg:rounded-xl ",
         styles.carousel
       )}
     >
       <Swiper
-        ref={swiper}
         navigation={true}
         keyboard={true}
         modules={[Navigation, Keyboard]}
-        className={cn("w-full max-w-7xl mx-auto bg-primary/10 lg:!px-8 !px-1 lg:!py-4 !py-1 rounded-xl items-stretch flex", styles.wrapper)}
+        className={cn("w-full max-w-7xl lg:bg-primary/10 lg:rounded-xl mx-auto lg:!px-8 !px-1 lg:!py-4 !py-1 items-stretch flex !static lg:!relative", styles.wrapper)}
         breakpoints={{
-          520: {
+          0: {
+            direction: 'horizontal',
+            slidesPerView: 1
+          },
+          640: {
             slidesPerView: 3,
             direction: 'vertical'
           },
           1024: {
-            direction: 'horizontal'
+            direction: 'horizontal',
+            slidesPerView: 3
           },
           1280: {
             slidesPerView: 4

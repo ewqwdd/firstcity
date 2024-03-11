@@ -17,3 +17,10 @@
     min-height: 0;
   }
 }
+
+@media (max-width: 640px) {
+  .heading {
+    height: auto;
+    min-height: calc(100dvh - var(--nav-height));
+  }
+}

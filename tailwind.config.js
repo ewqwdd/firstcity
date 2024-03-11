@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       fontSize: {
         '2xl': 'clamp(1rem, 1.5vw, 1.5rem)',
-        '6xl': 'clamp(2.8rem, 6vw, 5rem)',
+        '6xl': 'clamp(2.8rem, 5vw, 4.6rem)',
       },
       lineHeight: {
         '2xl': '1.4',

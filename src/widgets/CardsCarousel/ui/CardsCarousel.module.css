@@ -4,6 +4,6 @@
 
 @media (max-width: 1024px) {
   .wrapper {
-    max-height: calc(100dvh - var(--nav-height));
+    max-height: calc(100dvh - var(--nav-height) - 6.5rem);
   }
 }

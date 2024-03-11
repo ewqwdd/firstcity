@@ -1,36 +1,39 @@
+import { Button } from '@/components/ui/button'
+import HStack from '@/shared/ui/Flex/HStack'
+import VStack from '@/shared/ui/Flex/VStack'
+import { ArrowDown } from 'lucide-react'
+import styles from './HeroPictureMobile.module.css'
 import Image from 'next/image'
+import { cn } from '@/shared/lib/utils'
+import Link from 'next/link'
 
 export default function HeroPictureMobile() {
   return (
-    <div className="relative w-[480px]">
+    <VStack className="grow relative">
+    <div className='relative max-h-[40dvh]' style={{
+        aspectRatio: '10/11'
+    }}> 
       <Image
-        src="/images/hero-bg.svg"
-        alt="hero-bg"
-        fill
-        className="object-contain object-top"
-      />
-      <svg width="0" height="0">
-        <defs>
-          <clipPath id="mask">
-            <path
-              style={{
-                translate: '-3px -108px',
-              }}
-              d="M13.3242 97.8335C13.7176 84.5422 23.4046 73.3608 36.5042 71.0777L440.73 0.624413C457.676 -2.32917 473.254 10.5529 473.534 27.7522L482.474 576.252C482.752 593.278 467.894 606.608 450.998 604.491L25.2609 551.164C10.9379 549.37 0.326131 536.981 0.753192 522.553L13.3242 97.8335Z"
-              fill="#2D5B9F"
-            />
-          </clipPath>
-        </defs>
-      </svg>
-      <Image
-        src="/images/hero.png"
+        src="/images/hero-masked.png"
         alt="hero-image"
         fill
         className="object-contain object-top"
-        style={{
-          clipPath: 'url("#mask")',
-        }}
       />
-    </div>
+      </div>
+      <HStack className='flex-wrap justify-around gap-x-4 gap-y-1'>
+            <Button className='font-medium text-xl py-2' variant={'secondary'}>
+              CONTACT US
+            </Button>
+            <Button className='font-medium text-xl py24 bg-foreground/10' variant={'ghost'}>
+              HOW IT WORKS?
+            </Button>
+          </HStack>
+        <Button className={cn('aspect-square rounded-full self-center mt-auto mb-4', styles.scrollDownBtn)} asChild>
+            <a href='#Carousel'>
+                <ArrowDown />
+            </a>
+        </Button>
+    </VStack>
+    
   )
 }

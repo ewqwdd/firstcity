@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --swiper-navigation-sides-offset: 4px;
@@ -13,7 +17,7 @@
       0.141 4.4%,
       0.723 12.9%,
       0.938 16.7%,
-      1.017,
+      a 1.017,
       1.077,
       1.121,
       1.149 24.3%,
@@ -157,4 +161,27 @@
 .parent:hover .shaking {
   transition: 0.3s ease-in-out;
   animation: shake 0.8s ease-in-out infinite;
+}
+
+@media (max-width: 1024px) and (min-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    left: 50% !important;
+    margin-left: calc(
+      0px - (var(--swiper-navigation-size) / 88 * 27)
+    ) !important;
+    z-index: 10;
+    margin-top: 0px !important;
+  }
+  .swiper-button-next {
+    bottom: 0;
+    top: auto !important;
+    rotate: 90deg;
+  }
+
+  .swiper-button-prev {
+    top: 0 !important;
+    rotate: 90deg;
+  }
 }

@@ -39,7 +39,15 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     height: calc(100dvh - var(--nav-height));
-    overflow-y: clip;
+    overflow: clip;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroGrid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 }
 
