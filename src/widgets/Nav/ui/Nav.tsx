@@ -5,6 +5,7 @@ import Paragraph from '@/shared/ui/Paragraph'
 import { linksList } from '../config/linksList'
 import styles from './Nav.module.css'
 import { cn } from '@/shared/lib/utils'
+import Link from 'next/link'
 
 export default function Nav() {
   return (
@@ -29,8 +30,10 @@ export default function Nav() {
             {elem.label}
           </Paragraph>
         ))}
-        <Button>
-          CONTACT US
+        <Button asChild>
+          <Link href='/contact-us'>
+            CONTACT US
+          </Link>
         </Button>
       </HStack>
     </HStack>

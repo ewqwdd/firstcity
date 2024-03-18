@@ -76,7 +76,7 @@ export default function MainContent() {
         <Textarea
           {...register('comment', {maxLength: 900})}
           placeholder="Comment"
-          className="max-h-64 min-h-20 h-28 max-sm:resize-none"
+          className="max-h-64 min-h-20 h-28 max-sm:resize-none bg-slate-100"
         />
         <Paragraph as="span" className="text-sm text-red-700">
           {errors['comment'] ?

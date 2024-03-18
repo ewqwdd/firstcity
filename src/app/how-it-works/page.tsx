@@ -1,53 +1,33 @@
-'use client'
 import VStack from "@/shared/ui/Flex/VStack";
 import Heading from "@/shared/ui/Heading";
-import Paragraph from "@/shared/ui/Paragraph";
-import { EffectCreative } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
+import HStack from "@/shared/ui/Flex/HStack";
+import Image from "next/image";
+import { cn } from "@/shared/lib/utils";
+import styles from './HowItWorks.module.css'
 export default function page() {
   return (
-    <VStack as='main'>
-        <VStack as='header' className="bg-FMC_primary px-3 overflow-hidden">
-            <div className="mx-auto max-w-7xl w-full grid grid-cols-2">
-                <VStack className="py-14 pl-7 max-w-3xl justify-between">
-                    <Heading as='h1' className="text-5xl font-bold text-slate-100">
-                        Revolutionising the quality of our services and ensuring top customer satisfaction
-                    </Heading>
-                    <Paragraph className="text-2xl leading-7 text-slate-300">
-                        You can see what our business has to offer by checking down below or by watching a short demonstration clip
-                    </Paragraph>
-                </VStack>
-                <div className="h-3/4 my-10 w-3/4 max-w-xl aspect-video">
-                <Swiper
-                    grabCursor={true}
-                    effect={'creative'}
-                    className="h-full !overflow-visible"
-                    loop
-                    creativeEffect={{
-                    prev: {
-                        translate: ['-10%', '-20%', -100],
-                    },
-                    next: {
-                        translate: ['10%', '20%', 100],
-                    },
-                    }}
-                    modules={[EffectCreative]}
-                    
-                >
-                    <SwiperSlide className="aspect-video  bg-slate-400">Slide 1</SwiperSlide>
-                    <SwiperSlide className="aspect-video bg-slate-500">Slide 2</SwiperSlide>
-                    <SwiperSlide className="aspect-video bg-slate-600">Slide 3</SwiperSlide>
-                    <SwiperSlide className="aspect-video bg-slate-700">Slide 4</SwiperSlide>
-                    <SwiperSlide className="aspect-video bg-slate-800">Slide 5</SwiperSlide>
-
-                </Swiper>
+    <main>
+        <HStack as='header' className={cn("relative min-h-96 w-full after:bg-slate-800 overflow-clip", styles.hero)}>
+            <HStack className={cn("w-[300%] absolute top-0 left-0 h-full grid grid-cols-3 -z-10", styles.carousel)}>
+                <div className="w-full h-full relative">
+                    <Image src='/images/how-it-works-1.webp' fill alt='Carousel Image 1' className="object-cover object-top"/>
                 </div>
-            </div>
-        </VStack>
-    </VStack>
+                <div className="w-full h-full relative">
+                    <Image src='/images/how-it-works-2.webp' fill alt='Carousel Image 2' className="object-cover object-top"/>
+                </div>
+                <div className="w-full h-full relative">
+                    <Image src='/images/how-it-works-3.webp' fill alt='Carousel Image 3' className="object-cover object-top"/>
+                </div>
+            </HStack>
+            <VStack className="text-white gap-[14px] self-center w-full max-w-7xl mx-auto px-3">
+                <Heading className="capitalize text-[40px] text-white font-medium max-w-[710px] max-sm:text-[32px] leading-tight max-[450px]:text-28 max-[420px]:text-25" as='h1'>
+                    Revolutionising the quality of our services and ensuring top <b>customer satisfaction</b>
+                </Heading>
+                <p className="text-xl max-w-[710px]">
+                    You can see what our business has to offer by checking down below or by watching a short demonstration clip
+                </p>
+            </VStack>
+        </HStack>
+    </main>
   )
 }

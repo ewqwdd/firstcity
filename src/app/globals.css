@@ -159,6 +159,7 @@ html {
 }
 
 .parent:hover .shaking {
+  opacity: var(--svg-opacity);
   transition: 0.3s ease-in-out;
   animation: shake 0.8s ease-in-out infinite;
 }

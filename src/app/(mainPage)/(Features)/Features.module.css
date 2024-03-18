@@ -38,9 +38,10 @@
 
 @supports (animation-timeline: view()) {
   .feature {
+    opacity: 0;
     animation: appear forwards;
     animation-timeline: view();
-    animation-range: entry 40% entry 120%;
+    animation-range: entry 90% entry 190%;
   }
 
   .featureWrapper {
@@ -48,14 +49,18 @@
   }
 
   .featureWrapper svg {
-    animation: scaleAppear;
+    animation: scaleAppear forwards;
+    opacity: 0;
     animation-timeline: --wrapper;
-    animation-range: entry -30%;
+    animation-range: entry 50%;
   }
 
   @media (max-width: 768px) {
     .feature {
-      animation-range: entry 20%;
+      animation-range: entry 80%;
+    }
+    .feature {
+      animation-range: entry 90% entry 220%;
     }
     .featureWrapper {
       --svg-opacity: 0.3;

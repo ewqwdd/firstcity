@@ -22,7 +22,7 @@ export default forwardRef(function useFormInputInput({className, label, id, erro
                     {label}
                     {required && <span className="text-red-600 text-sm">*</span>}
                 </Paragraph>
-                <Input {...props} id={id ?? replaced} ref={ref} className="text-base"/>
+                <Input {...props} id={id ?? replaced} ref={ref} className="text-base bg-slate-100"/>
                 <Paragraph as='span' className="text-sm leading-4 text-red-700">
                     {error ? map?.[error?.type] :  <div className='h-4' />}
                 </Paragraph>
