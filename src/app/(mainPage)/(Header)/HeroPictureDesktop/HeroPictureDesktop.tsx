@@ -4,7 +4,7 @@ import styles from './HeroPictureDesktop.module.css'
 
 export default function HeroPictureDesktop() {
   return (
-    <div className="relative lg:w-[480px] w-100% max-lg: h-full overflow-y-hidden">
+    <div className="relative lg:w-[480px] w-100% max-lg: h-full overflow-y-hidden pointer-events-none">
       <Image
         src="/images/hero-bg.svg"
         alt="hero-bg"

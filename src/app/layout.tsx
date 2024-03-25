@@ -28,7 +28,7 @@ export default function RootLayout({
         <div className={cn(styles.progress, 'bg-secondary')} />
         {isMobile ? <NavMobile /> : <Nav />}
         <AnimationWrapper>{children}</AnimationWrapper>
-        <div className='bg-primary h-96'>
+        <div className='bg-primary h-96 mt-6'>
 
         </div>
       </body>

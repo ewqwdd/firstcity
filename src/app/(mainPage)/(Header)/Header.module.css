@@ -22,5 +22,6 @@
   .heading {
     height: auto;
     min-height: calc(100dvh - var(--nav-height));
+    padding-bottom: 12px;
   }
 }

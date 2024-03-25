@@ -15,9 +15,9 @@ import ConditionalRender from './ConditionalRender'
 
 export default function Header() {
   return (
-    <HStack as="header" id="header" className='max-lg:pt-10'>
+    <HStack as="header" id="header" className='max-lg:pt-10 max-sm:pt-5'>
       <div className={cn(styles.heading, 'max-w-7xl mx-auto height-full leading overflow-x-clip gap-6 px-3')}>
-        <VStack className='gap-10 [&>*]:max-w-[680px] w-full justify-center'>
+        <VStack className='sm:gap-10 gap-[3svh] [&>*]:max-w-[680px] w-full justify-center'>
           <HStack className='relative max-sm:self-center max-sm:order-1'>
             <Heading className={cn('text-secondary font-extrabold text-6xl max-sm:text-center uppercase', 'headingText')}>
               <span className='max-lg:hidden'>Finding care <br/>simplified.</span>
@@ -31,11 +31,15 @@ export default function Header() {
             Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute.
           </Paragraph>
           <HStack className='lg:gap-[8%] gap-4 max-lg:flex-wrap max-sm:order-4 max-sm:hidden'>
-            <Button className='font-medium text-base lg:text-xl py-4' variant={'secondary'}>
-              CONTACT US
+            <Button className='font-medium text-base lg:text-xl py-4' variant={'secondary'} asChild>
+              <Link href='/contact-us'>
+                CONTACT US
+              </Link>
             </Button>
-            <Button className='font-medium text-base lg:text-xl py-4 bg-foreground/10' variant={'ghost'}>
-              HOW IT WORKS?
+            <Button className='font-medium text-base lg:text-xl py-4 bg-foreground/10' variant={'ghost'} asChild>
+              <Link href='/how-it-works'>
+                HOW IT WORKS?
+              </Link>
             </Button>
           </HStack>
         </VStack>

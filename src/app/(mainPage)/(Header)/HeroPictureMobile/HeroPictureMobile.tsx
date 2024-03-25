@@ -17,14 +17,14 @@ export default function HeroPictureMobile() {
         src="/images/hero-masked.png"
         alt="hero-image"
         fill
-        className="object-contain object-top"
+        className="object-contain object-top pointer-events-none"
       />
       </div>
-      <HStack className='flex-wrap justify-around gap-x-4 gap-y-1'>
-            <Button className='font-medium text-xl py-2' variant={'secondary'}>
+      <HStack className='flex-wrap justify-around gap-x-4 gap-y-1 mt-2 mb-4'>
+            <Button className='font-medium sm:text-xl text-lg py-2' variant={'secondary'}>
               CONTACT US
             </Button>
-            <Button className='font-medium text-xl py24 bg-foreground/10' variant={'ghost'}>
+            <Button className='font-medium sm:text-xl text-lg py24 bg-foreground/10' variant={'ghost'}>
               HOW IT WORKS?
             </Button>
           </HStack>

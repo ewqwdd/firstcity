@@ -7,7 +7,7 @@ export default function HeroPictureTablet() {
         src="/images/hero-masked.png"
         alt="hero-image"
         fill
-        className="object-contain object-top"
+        className="object-contain object-top pointer-events-none"
       />
     </div>
   )
