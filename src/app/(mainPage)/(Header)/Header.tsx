@@ -19,7 +19,7 @@ export default function Header() {
       <div className={cn(styles.heading, 'max-w-7xl mx-auto height-full leading overflow-x-clip gap-6 px-3')}>
         <VStack className='gap-10 [&>*]:max-w-[680px] w-full justify-center'>
           <HStack className='relative max-sm:self-center max-sm:order-1'>
-            <Heading className='text-secondary font-extrabold text-6xl max-sm:text-center uppercase'>
+            <Heading className={cn('text-secondary font-extrabold text-6xl max-sm:text-center uppercase', 'headingText')}>
               <span className='max-lg:hidden'>Finding care <br/>simplified.</span>
               <span className='lg:hidden'>Finding care simplified.</span>
             </Heading>
@@ -27,7 +27,7 @@ export default function Header() {
               <Search className='lg:size-24 md:size-12' />
             </Orbit>
           </HStack>
-          <Paragraph className='text-2xl text-slate-400 max-sm:text-center max-sm:order-2'>
+          <Paragraph className={cn('text-2xl text-slate-400 max-sm:text-center max-sm:order-2', 'subHeading')}>
             Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute.
           </Paragraph>
           <HStack className='lg:gap-[8%] gap-4 max-lg:flex-wrap max-sm:order-4 max-sm:hidden'>

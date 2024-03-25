@@ -1,13 +1,15 @@
+import { cn } from '@/shared/lib/utils'
 import Image from 'next/image'
+import styles from './HeroPictureDesktop.module.css'
 
 export default function HeroPictureDesktop() {
   return (
-    <div className="relative lg:w-[480px] w-100% max-lg: h-full">
+    <div className="relative lg:w-[480px] w-100% max-lg: h-full overflow-y-hidden">
       <Image
         src="/images/hero-bg.svg"
         alt="hero-bg"
         fill
-        className="object-contain object-top"
+        className={cn("object-contain object-top", styles.picBg)}
       />
       <svg width="0" height="0">
         <defs>
@@ -25,7 +27,7 @@ export default function HeroPictureDesktop() {
         src="/images/hero.png"
         alt="hero-image"
         fill
-        className="object-cover object-top"
+        className={cn("object-cover object-top", styles.picInner)}
         style={{
           clipPath: 'url("#mask")',
         }}

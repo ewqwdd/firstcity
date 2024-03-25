@@ -6,6 +6,7 @@ import { cn } from '@/shared/lib/utils'
 import NavMobile from '@/widgets/Nav/ui/NavMobile'
 import { detectMobileServer } from '@/shared/lib/DetectMobileServer'
 import styles from './mainPage.module.css'
+import AnimationWrapper from '@/widgets/AnimationWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode
 }) {
-  
   const isMobile = detectMobileServer()
   const height = isMobile ? styles.navHeightMobile : styles.navHeight
   return (
@@ -27,7 +27,10 @@ export default function RootLayout({
       <body className={cn(inter.className, 'overflow-x-hidden', height)}>
         <div className={cn(styles.progress, 'bg-secondary')} />
         {isMobile ? <NavMobile /> : <Nav />}
-          {children}
+        <AnimationWrapper>{children}</AnimationWrapper>
+        <div className='bg-primary h-96'>
+
+        </div>
       </body>
     </html>
   )

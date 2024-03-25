@@ -38,10 +38,10 @@
 
 @supports (animation-timeline: view()) {
   .feature {
-    opacity: 0;
+    /* opacity: 0;
     animation: appear forwards;
     animation-timeline: view();
-    animation-range: entry 90% entry 190%;
+    animation-range: entry 90% entry 190%; */
   }
 
   .featureWrapper {

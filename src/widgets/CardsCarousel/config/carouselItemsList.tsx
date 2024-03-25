@@ -5,7 +5,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
     {
     title: 'How it Works?',
     description: 'Discover the process in detail',
-    content: <Paragraph>Understand exactly how it works</Paragraph>,
+    content: <Paragraph className="text-anim">Understand exactly how it works</Paragraph>,
     link: {
       href: '/',
       label: 'Read more',
@@ -14,7 +14,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
   {
     title: 'About Us',
     description: 'Learn more about what we do',
-    content: <Paragraph>Understand what we have to offer</Paragraph>,
+    content: <Paragraph className="text-anim">Understand what we have to offer</Paragraph>,
     link: {
       href: '/about',
       label: 'Read more',
@@ -23,7 +23,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
   {
     title: 'Testimonials',
     description: 'Explore feedback from our valued customers',
-    content: <Paragraph>See what our customers say about us</Paragraph>,
+    content: <Paragraph className="text-anim">See what our customers say about us</Paragraph>,
     link: {
       href: '#testimonials',
       label: 'Read more',
@@ -32,7 +32,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
   {
     title: 'Contact Us',
     description: 'Reach out to us with your inquiries or concerns',
-    content: <Paragraph>Contact us if you have any enquiries or any concerns</Paragraph>,
+    content: <Paragraph className="text-anim">Contact us if you have any enquiries or any concerns</Paragraph>,
     link: {
       href: '/contact-us',
       label: 'Read more',
@@ -41,7 +41,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
   {
     title: 'Documents',
     description: 'Access official documents and contracts',
-    content: <Paragraph>Find all official documents and contracts</Paragraph>,
+    content: <Paragraph className="text-anim">Find all official documents and contracts</Paragraph>,
     link: {
       href: '/services',
       label: 'Read more',

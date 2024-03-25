@@ -134,6 +134,35 @@ html {
   }
 }
 
+.text-anim,
+.inner-text-anim * {
+  opacity: 0;
+  /* translate: 0 100px; */
+}
+
+.headingText {
+  animation: reveal 1s ease-in-out 0.3s forwards;
+  translate: 0 100px;
+  opacity: 0;
+}
+
+.subHeading {
+  translate: 0 100px;
+  opacity: 0;
+  animation: reveal 1.2s ease-in-out 0.5s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    translate: 0 100px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0px;
+    opacity: 1;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

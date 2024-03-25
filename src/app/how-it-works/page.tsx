@@ -20,10 +20,10 @@ export default function page() {
                 </div>
             </HStack>
             <VStack className="text-white gap-[14px] self-center w-full max-w-7xl mx-auto px-3">
-                <Heading className="capitalize text-[40px] text-white font-medium max-w-[710px] max-sm:text-[32px] leading-tight max-[450px]:text-28 max-[420px]:text-25" as='h1'>
+                <Heading className="capitalize text-[40px] text-white font-medium max-w-[710px] max-sm:text-[32px] leading-tight max-[450px]:text-28 max-[420px]:text-25 headingText" as='h1'>
                     Revolutionising the quality of our services and ensuring top <b>customer satisfaction</b>
                 </Heading>
-                <p className="text-xl max-w-[710px]">
+                <p className="text-xl max-w-[710px] subHeading">
                     You can see what our business has to offer by checking down below or by watching a short demonstration clip
                 </p>
             </VStack>
