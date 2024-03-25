@@ -15,7 +15,6 @@ interface UseFormInputInputInput extends InputProps {
 
 export default forwardRef(function useFormInputInput({className, label, id, error, map, required, ...props}: UseFormInputInputInput, ref: ForwardedRef<HTMLInputElement>) {
     const replaced = useMemo(() => label.replaceAll(' ', ''), [label])
-    console.log(props)
     return (
             <VStack className={cn("lg:gap-1", className)}>
                 <Paragraph as='label' htmlFor={id ?? replaced}>

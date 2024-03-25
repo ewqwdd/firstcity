@@ -1,5 +1,5 @@
 'use client'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { ContactForm } from '../(model)/types'
 import VStack from '@/shared/ui/Flex/VStack'
 import HStack from '@/shared/ui/Flex/HStack'
@@ -10,20 +10,41 @@ import { Button } from '@/components/ui/button'
 import { emailRegExp, phoneRegExp } from '@/shared/lib/regExp'
 import { FieldErrorsMap } from '../(model)/config'
 import { FormHookInput } from '@/shared/ui/FormHookInput'
+import { useCallback, useState } from 'react'
+import Loader from '@/shared/ui/Loader'
 
-export default function MainContent() {
+interface MainContentProps {
+  cb?: (data: ContactForm) => Promise<{status: number, data: unknown}>
+}
+
+export default function MainContent({cb}: MainContentProps) {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    control: {_disableForm}
   } = useForm<ContactForm>()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+
+  const onSubmit = useCallback(handleSubmit(async (e) => {
+    _disableForm(true)
+    setIsLoading(true)
+    const res = await cb?.(e)
+    _disableForm(false)
+    setIsLoading(false)
+  }), [])
 
   return (
     <VStack
       as="form"
-      className="lg:col-span-2 col-span-3 lg:px-[5%] md:px-4 gap-0.5 text-lg text-purple-950"
-      onSubmit={handleSubmit((e) => {})}
+      className="lg:col-span-2 col-span-3 lg:px-[5%] md:px-4 gap-0.5 text-lg text-purple-950 relative"
+      onSubmit={onSubmit}
     >
+      {isLoading ? <HStack className='justify-center size-full absolute top-0 left-0'>
+        <HStack className='items-center justify-center w-[95%] h-full bg-black/10 rounded-md'> 
+          <Loader />
+        </HStack>
+      </HStack> : null}
       <Heading as="h2" className="text-xl text-purple-950">
         Request a call from our team of experts by completing the form below:
       </Heading>
