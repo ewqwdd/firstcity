@@ -2,15 +2,18 @@ import VStack from "@/shared/ui/Flex/VStack";
 import styles from './faq.module.css'
 import Heading from "@/shared/ui/Heading";
 import Paragraph from "@/shared/ui/Paragraph";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { faqElements } from "./(config)/faqElements";
-import FaqElem from "./(ui)/FaqElem";
 import FaqAccordion from "./(ui)/FaqAccordion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { MessageCircleQuestion } from "lucide-react";
 import HStack from "@/shared/ui/Flex/HStack";
 import { cn } from "@/shared/lib/utils";
+import { Metadata } from "next/types";
+
+export const metadata: Metadata = {
+  title: 'FAQ | Find My Care',
+  description: 'Find My Care',
+}
 
 export default function page() {
   return (

@@ -7,8 +7,14 @@ import VStack from "@/shared/ui/Flex/VStack";
 import { Remarkable } from 'remarkable'
 import { readFileSync } from "fs";
 import path from "path";
+import { Metadata } from "next/types";
 
 const md = new Remarkable();
+
+export const metadata: Metadata = {
+  title: 'About Us | Find My Care',
+  description: 'Find My Care',
+}
 
 export default function About() {
     const aboutUs = readFileSync(path.resolve(process.cwd(), 'public', 'markdowns', 'about-us.md'), 'utf-8')

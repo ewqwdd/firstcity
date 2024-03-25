@@ -5,6 +5,12 @@ import ResponsiveHide from '@/shared/ui/ResponsiveHide'
 import ContactCard from './(ui)/ContactCard'
 import Loader from '@/shared/ui/Loader'
 import HStack from '@/shared/ui/Flex/HStack'
+import { Metadata } from 'next/types'
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Find My Care',
+  description: 'Find My Care',
+}
 
 export default function page() {
   return (

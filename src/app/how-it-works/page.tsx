@@ -4,6 +4,13 @@ import HStack from "@/shared/ui/Flex/HStack";
 import Image from "next/image";
 import { cn } from "@/shared/lib/utils";
 import styles from './HowItWorks.module.css'
+import { Metadata } from "next/types";
+
+export const metadata: Metadata = {
+  title: 'How It Works | Find My Care',
+  description: 'Find My Care',
+}
+
 export default function page() {
   return (
     <main>
