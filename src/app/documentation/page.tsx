@@ -35,11 +35,14 @@ export default function About() {
           border: '1px solid rgba(184, 184, 184, 0.34)',
         }}
       >
-        <h2 className="text-slate-800 font-medium">
+        <h3 className='text-slate-800 font-bold'>
+            Documentation page
+        </h3>
+        <p className="text-slate-800 font-medium">
           First City Care Group aims to stick to the guidelines of the business
           and ensure that every customer is aware of the regulations which are
           set in place
-        </h2>
+        </p>
         <HStack className="items-center text-slate-800/80 font-light">
           <p>Below are First City Care Group’s Overview Documentation</p>
           <ArrowDown className="size-9 lg:grow" />

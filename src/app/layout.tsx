@@ -36,7 +36,7 @@ export default function RootLayout({
         >
           <HStack className="justify-around text-sm mx-auto w-full max-w-7xl px-3 max-sm:flex-col max-sm:gap-3 items-center">
             <Link href="/documentation" className="underline text-white/80">
-              Terms & Conditions
+              Documentation page
             </Link>
             <Link href={'/'} className="underline text-white">
               @ First City Care Group
