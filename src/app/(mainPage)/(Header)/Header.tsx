@@ -28,7 +28,7 @@ export default function Header() {
             </Orbit>
           </HStack>
           <Paragraph className={cn('text-2xl text-slate-400 max-sm:text-center max-sm:order-2', 'subHeading')}>
-            Ut amet id quis irure reprehenderit. Elit magna cupidatat elit sint laborum elit do fugiat consectetur dolor excepteur aute.
+              At First City, we aim to simplify the search for quality care for all ages, ensuring it's effective and fits your needs perfectly.
           </Paragraph>
           <HStack className='lg:gap-[8%] gap-4 max-lg:flex-wrap max-sm:order-4 max-sm:hidden'>
             <Button className='font-medium text-base lg:text-xl py-4' variant={'secondary'} asChild>
