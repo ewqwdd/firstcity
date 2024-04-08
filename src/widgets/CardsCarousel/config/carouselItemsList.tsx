@@ -7,7 +7,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
     description: 'Discover the process in detail',
     content: <Paragraph className="text-anim">Understand exactly how it works</Paragraph>,
     link: {
-      href: '/',
+      href: '/how-it-works',
       label: 'Read more',
     },
   },
@@ -43,7 +43,7 @@ export const CarouselItemsList: CardMainPageProps[] = [
     description: 'Access official documents and contracts',
     content: <Paragraph className="text-anim">Find all official documents and contracts</Paragraph>,
     link: {
-      href: '/services',
+      href: '/documentation',
       label: 'Read more',
     },
   },

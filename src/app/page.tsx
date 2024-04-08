@@ -5,6 +5,9 @@ import styles from './mainPage.module.css'
 import { ConditionalRender } from "@/widgets/Testimonials";
 import { getSheetValues } from "@/shared/lib/api/getTestimonials";
 import { sheets_v4 } from "googleapis";
+import { Suspense } from "react";
+import CardsCarouselAsync from "@/widgets/CardsCarousel/ui/CardsCarousel.async";
+import Loader from "@/shared/ui/Loader";
 
 interface Forward {
   data?: sheets_v4.Schema$ValueRange['values']
@@ -27,10 +30,12 @@ export default async function Home() {
     <>
       <div className={styles.heroGrid}>
         <Header />
-        <CardsCarousel />
+        <Suspense fallback={<Loader />}>
+          <CardsCarouselAsync />
+        </Suspense>
       </div>
       <Features />
-      <section className="overflow-clip px-3 mt-6" style={{
+      <section className="overflow-clip px-3 mt-6" id='testimonials' style={{
         maxWidth: '100dvw'
       }}>
         <h2 className="text-4xl text-slate-900 text-center font-semibold">
