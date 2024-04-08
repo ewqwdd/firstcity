@@ -165,6 +165,10 @@ html {
   animation: reveal 1.2s ease-in-out 0.5s forwards;
 }
 
+.min-height-no-nav {
+  min-height: calc(100dvh - var(--nav-height));
+}
+
 @keyframes reveal {
   0% {
     translate: 0 100px;
@@ -207,8 +211,8 @@ html {
 }
 
 @media (max-width: 1024px) and (min-width: 640px) {
-  .swiper-button-prev,
-  .swiper-button-next {
+  #Carousel .swiper-button-prev,
+  #Carousel .swiper-button-next {
     position: absolute;
     left: 50% !important;
     margin-left: calc(
@@ -217,13 +221,13 @@ html {
     z-index: 10;
     margin-top: 0px !important;
   }
-  .swiper-button-next {
+  #Carousel .swiper-button-next {
     bottom: 0;
     top: auto !important;
     rotate: 90deg;
   }
 
-  .swiper-button-prev {
+  #Carousel .swiper-button-prev {
     top: 0 !important;
     rotate: 90deg;
   }

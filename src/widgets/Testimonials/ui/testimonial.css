@@ -1,0 +1,17 @@
+.testimonial-slider {
+  --swiper-theme-color: whitesmoke !important;
+  --swiper-navigation-sides-offset: -2.5rem !important;
+}
+
+@media (max-width: 900px) {
+  .testimonial-slider {
+    --swiper-navigation-sides-offset: 0.5rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-slider {
+    --swiper-navigation-sides-offset: -0.5rem !important;
+    --swiper-navigation-size: 32px;
+  }
+}
